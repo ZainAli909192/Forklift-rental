@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loader.style.display = "none";
   }, 2000); // 2000 milliseconds = 2 seconds
 
-  const text = "Expert Towing, Crane, Forklift & Bockat Services";
+  const text = "FORKLIFT AND RECOVERY RENTAL SERVICES";
   const typingText = document.getElementById("typing-text");
   const cursor = document.querySelector(".cursor");
 

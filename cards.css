@@ -355,6 +355,9 @@ height:300px;
   .media{
       bottom: -6%;
   }
+  .slider-btn {
+width: 5%;
+  }
 }
 @media (max-width: 480) {
   
