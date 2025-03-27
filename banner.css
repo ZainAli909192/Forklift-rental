@@ -1,0 +1,222 @@
+/* Banner Section */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #f7f7f7, #e0e0e0); /* Gradient background */
+  height: 84vh; /* Adjust height as needed */
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  flex: 1; /* Take up equal space */
+  padding-right: 30px;
+  animation: slideBottom 1.5s ease-in-out;
+  z-index: 2;
+}
+
+.banner-content h1 {
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.banner-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  margin-right: 8%;
+  margin-top: 3rem;
+  animation: slideRight 1.5s ease-in-out;
+  z-index: 2;
+}
+
+#banner2-img {
+  height: 70%;
+  width: 70%;
+}
+
+.banner-image video,
+.banner-image img {
+  max-width: 80%;
+  border: 1px solid rgba(156, 149, 148, 0.3);
+  height: 100%;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-image video:hover,
+.banner-image img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Animations */
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fleet Section */
+body .fleet {
+  font-weight: bold;
+  margin-left: 25%;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* List Items */
+.banner ul {
+  padding: 0;
+}
+
+.banner ul li {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.banner ul li i {
+  margin-right: 10px;
+  color: var(--primary-color); /* Use your theme color */
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.banner ul li:hover i {
+  color: #ff4d4d; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .banner-content {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .banner-image {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .banner-image video,
+  .banner-image img {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .banner2 {
+    margin-top: 2rem;
+  }
+
+  .banner2 img {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .banner2 h1 {
+    display: none;
+  }
+
+  body .fleet {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #banner2-img{
+    width: 250px;
+    height: 250px;
+  }
+  #typing-heading {
+font-size: 1.6rem !important;
+margin-bottom: 2rem !important;  
+}
+
+}
+#banner2-img{
+  /* height: 100%; */
+  width: 400px;
+  height: 400px;
+}
+
+
+/* typing effect  */
+#typing-heading {
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #333;
+  overflow: hidden; /* Hide overflow text */
+  /* white-space: nowrap; Prevent text from wrapping */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: #333;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
