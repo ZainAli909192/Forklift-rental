@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  type(); // Start the typing effect
+  type(); // Start the typing effect 
 });
 
 
@@ -163,3 +163,44 @@ function slideLeft() {
   
 // Set the initial position
 updateSliderPosition();
+
+// phone icon shaker 
+// Select the phone icon correctly (it's inside the .phone-icon anchor)
+document.addEventListener('DOMContentLoaded', function() {
+  // Correctly target the phone icon inside the .cal div
+  const phoneIcon = document.querySelector('.cal .phone-icon img');
+  
+  // Only proceed if the element exists
+  if (phoneIcon) {
+      function triggerShake() {
+          // Add shake class
+          phoneIcon.classList.add('phone-shaking');
+          
+          // Remove after animation completes
+          setTimeout(() => {
+              phoneIcon.classList.remove('phone-shaking');
+          }, 500);
+      }
+      
+      // Initial shake
+      triggerShake();
+      
+      // Shake every 2 seconds
+      const shakeInterval = setInterval(triggerShake, 1500);
+      
+      // Optional: Pause on hover 
+      phoneIcon.addEventListener('mouseenter', () => {
+          clearInterval(shakeInterval);
+          phoneIcon.classList.remove('phone-shaking');
+      });
+      
+      phoneIcon.addEventListener('mouseleave', () => {
+          // Restart interval
+          shakeInterval = setInterval(triggerShake, 2000);
+          // Immediate shake when mouse leaves
+          triggerShake();
+      });
+  } else {
+      console.log("Phone icon not found - check your selector");
+  }
+});
